@@ -13,9 +13,11 @@ header {
   align-items: center;
 }
 
+/* Cambiar el color del logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
+  color: magenta; /* Cambia a tu color preferido */
 }
 
 nav ul {
@@ -37,6 +39,34 @@ nav ul li a {
 
 nav ul li:hover > a {
   color: magenta;
+}
+
+/* Cambiar el color de las letras del navbar */
+.navbar-nav .nav-link {
+  color: white; /* Cambia a blanco o el color que prefieras */
+}
+
+.navbar-nav .nav-link:hover {
+  color: magenta; /* Cambia el color al pasar el mouse */
+}
+
+/* Cambiar el color del dropdown */
+.navbar-nav .dropdown-menu {
+  background-color: #1c1f26; /* Fondo oscuro */
+}
+
+.navbar-nav .dropdown-item {
+  color: white; /* Color de las opciones del dropdown */
+}
+
+.navbar-nav .dropdown-item:hover {
+  color: magenta; /* Cambia el color al pasar el mouse */
+  background-color: #2a2f38; /* Fondo al pasar el mouse */
+}
+
+/* Cambiar el color del ícono del botón de hamburguesa */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .submenu {
@@ -101,8 +131,19 @@ footer {
 
 .footer-container {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.footer-container > div {
+  flex: 1 1 calc(33.333% - 20px);
+}
+
+@media (max-width: 768px) {
+  .footer-container > div {
+    flex: 1 1 100%;
+  }
 }
 
 .footer-container h3 {
