@@ -1,0 +1,338 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+header {
+  background-color: #1c1f26;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li:hover > a {
+  color: magenta;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #2a2f38;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+}
+
+.submenu li {
+  padding: 5px 0;
+}
+
+.submenu li a {
+  color: white;
+  font-size: 14px;
+}
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  background-color: #1c1f26;
+  padding: 30px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-container h3 {
+  color: magenta;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+
+.footer-newsletter button {
+  padding: 10px;
+  background: magenta;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-redes img {
+  width: 32px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.card {
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+  transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño de la card */
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.8); /* Agrega un glow magenta */
+}
+
+.card img {
+  transition: transform 0.3s ease-in-out; /* Suaviza la transición de la imagen */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Aplica un zoom a la imagen */
+}
+
+/* Ajuste de las tarjetas */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 750px; /* Aumenta la altura para que las imágenes tengan más espacio */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden;
+}
+
+.flip-card-front img {
+  object-fit: cover; /* Asegura que las imágenes se ajusten al tamaño */
+  width: 100%;
+  height: 100%; /* Ocupa toda la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #222; /* Fondo más oscuro */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Ajuste de las letras */
+.flip-card-back h5 {
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
+  margin-bottom: 10px;
+  color: magenta; /* Color destacado */
+}
+
+.flip-card-back p {
+  font-size: 1rem; /* Tamaño de fuente más pequeño */
+  margin-bottom: 20px;
+  color: #ccc; /* Color gris claro */
+}
+
+/* Ajuste de las barras de habilidades */
+.skill {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.skill label {
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  color: #fff; /* Color blanco */
+  margin-bottom: 5px;
+  display: block;
+}
+
+.progress {
+  height: 10px; /* Altura más pequeña para las barras */
+  background-color: #444; /* Fondo de la barra */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Rating con estrellas */
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 2rem;
+  color: gray;
+  cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+}
+
+/* Estilos para el formulario de contacto */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #1c1f26;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ 
+}
+
+form label {
+  color: white;
+  font-weight: bold;
+}
+
+form .form-control {
+  background-color: #2a2f38;
+  color: white;
+  border: 1px solid #444;
+}
+
+form .form-control:focus {
+  background-color: #333;
+  color: white;
+  border-color: magenta;
+  box-shadow: 0 0 5px magenta;
+}
+
+form .btn-primary {
+  background-color: magenta;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+form .btn-primary:hover {
+  background-color: #ff00ff;
+}
+
+form .spinner-border {
+  margin-left: 10px;
+}
+
+.invalid-feedback,
+.valid-feedback {
+  font-size: 0.9rem;
+}
+
+/* Estilos para el modal */
+.modal-content {
+  background-color: #1c1f26;
+  color: white;
+  border-radius: 10px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #444;
+}
+
+.modal-footer {
+  border-top: 1px solid #444;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #444;
+  border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #555;
+}
+
+/* Agregar margen entre el formulario y el footer */
+.container {
+  margin-bottom: 50px; /* Aumenta el espacio debajo del formulario */
+  padding: 75px; /* Espacio interno del contenedor */
+}
+
+footer.footer {
+  margin-top: 500px; /* Aumenta el espacio encima del footer */
+}

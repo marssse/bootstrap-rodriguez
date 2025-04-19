@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProGear Gaming - Contacto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">ProGear Gaming.</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clases.html">Productos</a></li>
+            <li><a href="entrenadores.html">Coachs</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+  <!-- Formulario de contacto -->
+  <div class="container my-5 ">
+    <h2 class="text-center mb-4">Contáctanos</h2>
+    <form id="contactForm" class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
+        <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+        <div class="valid-feedback">¡Perfecto!</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
+        <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+        <div class="valid-feedback">¡Perfecto!</div>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+        <div class="invalid-feedback">Por favor, escribe un mensaje.</div>
+        <div class="valid-feedback">¡Perfecto!</div>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        Enviar
+        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+      </button>
+    </form>
+  </div>
+
+  <!-- Modal de confirmación -->
+  <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmationModalLabel">¡Mensaje Enviado!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Gracias por contactarnos. Nos pondremos en contacto contigo pronto.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-newsletter">
+        <h3>¿Querés estar conectado?</h3>
+        <form class="newsletter-form needs-validation" novalidate>
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="E-mail" required>
+          <button type="submit">
+            Suscribirme
+            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          </button>
+        </form>
+      </div>
+
+      <div class="footer-mapa">
+        <h3>¿Dónde estamos?</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1819.753772245603!2d-65.29365413796236!3d-24.188997732238352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1744351152959!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="footer-redes">
+        <h3>Seguinos</h3>
+        <p>¡Conéctate con nosotros en nuestras redes sociales para más novedades y consejos!</p>
+        <div class="redes">
+          <a href="#"><img src="img/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="img/instagram-icon.png" alt="Instagram" /></a>
+          <a href="#"><img src="img/twitter-icon.png" alt="Twitter" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 ProGear Gaming on top. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function () {
+      // Validación en tiempo real
+      $("#contactForm").on("input", function (e) {
+        const input = $(e.target);
+        if (input[0].checkValidity()) {
+          input.removeClass("is-invalid").addClass("is-valid");
+        } else {
+          input.removeClass("is-valid").addClass("is-invalid");
+        }
+      });
+
+      // Enviar formulario
+      $("#contactForm").on("submit", function (e) {
+        e.preventDefault();
+
+        // Mostrar spinner
+        const button = $(this).find("button[type='submit']");
+        const spinner = button.find(".spinner-border");
+        spinner.removeClass("d-none");
+
+        // Simular envío
+        setTimeout(function () {
+          spinner.addClass("d-none");
+          $("#confirmationModal").modal("show");
+          $("#contactForm")[0].reset();
+          $(".is-valid").removeClass("is-valid");
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

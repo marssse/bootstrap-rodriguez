@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ProGear Gaming - Inicio</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        
+      </head>
+<body>
+    <header>
+        <div class="logo">ProGear Gaming.</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+              <a href="clases.html">Productos</a>
+              <ul class="submenu">
+                <li><a href="#">Teclados</a></li>
+                <li><a href="#">Mouses</a></li>
+                <li><a href="#">Auriculares</a></li>
+              </ul>
+            </li>
+            <li><a href="entrenadores.html">Coachs</a></li>
+            </li>
+            <li><a href="precios.html">Precios</a></li>
+          <li><a href="contacto.html">Contactanos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        </nav>
+      </header>
+
+  <!-- Coachs -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Nuestros Coachs de Esports</h2>
+    <div class="row">
+      <!-- Coach 1 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/coach1.jpg" class="img-fluid" alt="Mazino">
+            </div>
+            <div class="flip-card-back">
+              <h5>Mazino</h5>
+              <p>Especialista en estrategias avanzadas para FPS.</p>
+              <div class="skill">
+                <label>Game Sense</label>
+                <div class="progress">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <label>Estrategias</label>
+                <div class="progress">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Coach 2 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/coach2.jpg" class="img-fluid" alt="Potter">
+            </div>
+            <div class="flip-card-back">
+              <h5>Potter</h5>
+              <p>Experta en game sense y toma de decisiones en tiempo real.</p>
+              <div class="skill">
+                <label>Game Sense</label>
+                <div class="progress">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <label>Rutinas</label>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Coach 3 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/coach3.jpg" class="img-fluid" alt="TenZ">
+            </div>
+            <div class="flip-card-back">
+              <h5>TenZ</h5>
+              <p>Entrenador en rutinas de entrenamiento y preparación mental.</p>
+              <div class="skill">
+                <label>Rutinas</label>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <label>Estrategias</label>
+                <div class="progress">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rating con estrellas -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Califica a nuestros Coachs</h2>
+    <div class="d-flex justify-content-center">
+      <div class="rating">
+        <input type="radio" name="star" id="star1"><label for="star1">★</label>
+        <input type="radio" name="star" id="star2"><label for="star2">★</label>
+        <input type="radio" name="star" id="star3"><label for="star3">★</label>
+        <input type="radio" name="star" id="star4"><label for="star4">★</label>
+        <input type="radio" name="star" id="star5"><label for="star5">★</label>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-newsletter">
+        <h3>¿Querés estar conectado?</h3>
+        <form class="newsletter-form needs-validation" novalidate>
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="E-mail" required>
+          <button type="submit">
+            Suscribirme
+            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          </button>
+        </form>
+      </div>
+
+      <div class="footer-mapa">
+        <h3>¿Dónde estamos?</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1819.753772245603!2d-65.29365413796236!3d-24.188997732238352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1744351152959!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="footer-redes">
+        <h3>Seguinos</h3>
+        <p>¡Conéctate con nosotros en nuestras redes sociales para más novedades y consejos!</p>
+        <div class="redes">
+          <a href="#"><img src="img/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="img/instagram-icon.png" alt="Instagram" /></a>
+          <a href="#"><img src="img/twitter-icon.png" alt="Twitter" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 ProGear Gaming on top. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

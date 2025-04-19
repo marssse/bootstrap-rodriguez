@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProGear Gaming - Inicio</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+  <header>
+    <div class="logo">ProGear Gaming.</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="clases.html">Productos</a>
+          <ul class="submenu">
+            <li><a href="#">Teclados</a></li>
+            <li><a href="#">Mouses</a></li>
+            <li><a href="#">Auriculares</a></li>
+          </ul>
+        </li>
+        <li><a href="entrenadores.html">Coachs</a></li>
+        </li>
+        <li><a href="precios.html">Precios</a></li>
+      <li><a href="contacto.html">Contactanos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <!-- Hero con video de fondo -->
+  <div class="hero">
+    <video autoplay muted loop>
+      <source src="video/hero-video.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="overlay">
+      <h1 class="text-white text-center display-4">Bienvenido a ProGear Gaming</h1>
+    </div>
+  </div>
+
+  <!-- Clases destacadas -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Clases Destacadas</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="img/clase1.jpg" class="card-img-top" alt="Clase 1">
+          <div class="card-body">
+            <h5 class="card-title">Logitech G PRO X Superlight 2</h5>
+            <p class="card-text">El mouse más ligero de Logitech, diseñado para gamers profesionales. Ofrece precisión extrema, conectividad inalámbrica LIGHTSPEED y un diseño ergonómico para largas sesiones de juego.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="img/clase2.jpg" class="card-img-top" alt="Clase 2">
+          <div class="card-body">
+            <h5 class="card-title">MAD 60he</h5>
+            <p class="card-text">Un teclado mecánico compacto con switches de alta calidad, iluminación RGB personalizable y un diseño minimalista ideal para setups modernos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="img/clase3.jpg" class="card-img-top" alt="Clase 3">
+          <div class="card-body">
+            <h5 class="card-title">Logitech G Pro X Lightspeed </h5>
+            <p class="card-text">Auriculares inalámbricos con tecnología LIGHTSPEED, sonido envolvente 7.1 y micrófono extraíble para una experiencia de audio inmersiva y comunicación clara.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contador animado -->
+  <div class="container text-center my-5">
+    <h2>Estadísticas</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3><span id="counter1">0</span>+</h3>
+        <p>Clientes satisfechos</p>
+      </div>
+      <div class="col-md-4">
+        <h3><span id="counter2">0</span>+</h3>
+        <p>Productos vendidos</p>
+      </div>
+      <div class="col-md-4">
+        <h3><span id="counter3">0</span>+</h3>
+        <p>Clases impartidas</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonios en carrusel -->
+  <div id="testimoniosCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p class="card-text">"Excelente servicio y productos de calidad."</p>
+              <h5 class="card-title">- Tito Calderon</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p class="card-text">"Me encantaron las clases, muy recomendadas."</p>
+              <h5 class="card-title">- Kevin Castaño</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p class="card-text">"Gran experiencia de compra, volveré pronto."</p>
+              <h5 class="card-title">- Franco Mastantuono</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-newsletter">
+        <h3>¿Querés estar conectado?</h3>
+        <form class="newsletter-form needs-validation" novalidate>
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="E-mail" required>
+          <button type="submit">
+            Suscribirme
+            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          </button>
+        </form>
+      </div>
+
+      <div class="footer-mapa">
+        <h3>¿Dónde estamos?</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1819.753772245603!2d-65.29365413796236!3d-24.188997732238352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1744351152959!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="footer-redes">
+        <h3>Seguinos</h3>
+        <p>¡Conéctate con nosotros en nuestras redes sociales para más novedades y consejos!</p>
+        <div class="redes">
+          <a href="#"><img src="img/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="img/instagram-icon.png" alt="Instagram" /></a>
+          <a href="#"><img src="img/twitter-icon.png" alt="Twitter" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 ProGear Gaming on top. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    $(document).ready(function () {
+      // Submenu hover
+      $('nav ul li').hover(function () {
+        $(this).find('.submenu').stop(true, true).slideDown(300);
+      }, function () {
+        $(this).find('.submenu').stop(true, true).slideUp(300);
+      });
+
+      // Card hover animation
+      $('.card').hover(function () {
+        $(this).animate({ marginTop: '-10px' }, 200);
+      }, function () {
+        $(this).animate({ marginTop: '0px' }, 200);
+      });
+
+      // Contador animado
+      const options = { duration: 2 };
+      const counter1 = new CountUp('counter1', 1000, options);
+      const counter2 = new CountUp('counter2', 500, options);
+      const counter3 = new CountUp('counter3', 300, options);
+
+      if (!counter1.error) counter1.start();
+      if (!counter2.error) counter2.start();
+      if (!counter3.error) counter3.start();
+
+      // Formulario con spinner
+      $('.newsletter-form').on('submit', function (e) {
+        e.preventDefault();
+        const form = $(this);
+        if (form[0].checkValidity() === false) {
+          e.stopPropagation();
+          form.addClass('was-validated');
+        } else {
+          const spinner = form.find('.spinner-border');
+          spinner.removeClass('d-none');
+          setTimeout(() => {
+            spinner.addClass('d-none');
+            alert('¡Suscripción exitosa!');
+          }, 2000);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
